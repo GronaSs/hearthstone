@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Моя Работа</title>
+  </head>
+  <body style="background-image: url(bg.jpg)">
+    <script type="text/javascript">
+      let array = ["1.png","2.png","3.png","4.png","5.png","6.png","7.png","8.png","9.png","10.png","super.png"];
+    let getRandom = function(){
+      let rand = Math.random()*5
+      let round = Math.round(rand)
+      return round;
+    }
+    let getRandom1 = function(){
+      let rand1 = Math.random()*10
+      let round1 = Math.round(rand1)
+      return round1;
+    }
+    let createEnemyCards = function(arg){
+      for(let index = 0; index<arg; index = index + 1){//цикл
+        let elem = document.createElement("img")
+        document.body.appendChild(elem)
+        elem.style.height = "200px";
+        elem.src = array[getRandom1()]
+      }
+    }
+    let createPlayerCards = function(arg){
+      for(let index = 0; index<arg; index = index + 1){//цикл
+        let elem = document.createElement("img")
+        document.body.appendChild(elem)
+        elem.style.height = "200px";
+        elem.src = "2.png";
+      }
+    }
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
